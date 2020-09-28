@@ -2,25 +2,26 @@
 
   <h4 class="mb-3">Ajouter une langue</h4>
 
-<form action="">
+<form [formGroup]="form" (ngSubmit)="save()" #documentEditForm="ngForm">
   <div class="row">
     <div class="col-md-6">
       <div class="form-group">
         <label >Choisir une lanue</label>
-        <select name="status" class="form-control" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Status">
-          <option value="not started">Not Started</option>
-          <option value="started">Started</option>
-          <option value="fixed">Fixed</option>
+        <select name="status" class="form-control" formControlName="designation" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Status">
+          <option value="not started">Anglais</option>
+          <option value="started">Francais</option>
+          <option value="fixed">Néerlandais.</option>
         </select>
       </div>
     </div>
     <div class="col-md-6">
       <div class="form-group">
         <label>Niveau parlé</label>
-        <select  name="status" class="form-control" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Status">
-          <option value="not started">Not Started</option>
-          <option value="started">Started</option>
-          <option value="fixed">Fixed</option>
+        <select  name="status" class="form-control" formControlName="niveau_p" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Status">
+          <option value="not started">Elementaire</option>
+          <option value="started">Courant</option>
+          <option value="fixed">Pre-intermediare</option>
+          <option value="fixed">intermediare</option>
         </select>
       </div>
     </div>
@@ -30,26 +31,28 @@
     <div class="col-md-6">
       <div class="form-group">
         <label>Niveau ecrit</label>
-        <select id name="status" class="form-control" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Status">
-          <option value="not started">Not Started</option>
-          <option value="started">Started</option>
-          <option value="fixed">Fixed</option>
+        <select id name="status" class="form-control" formControlName="niveau_e" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Status">
+          <option value="not started">Elementaire</option>
+          <option value="started">Courant</option>
+          <option value="fixed">Pre-intermediare</option>
+          <option value="fixed">intermediare</option>
         </select>
       </div>
     </div>
     <div class="col-md-6">
       <div class="form-group">
         <label>Niveau comphrension</label>
-        <select  name="status" class="form-control" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Status">
-          <option value="not started">Not Started</option>
-          <option value="started">Started</option>
-          <option value="fixed">Fixed</option>
+        <select  name="status" class="form-control" formControlName="niveau_c" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Status">
+          <option value="not started">Elementaire</option>
+          <option value="started">Courant</option>
+          <option value="fixed">Pre-intermediare</option>
+          <option value="fixed">intermediare</option>
         </select>
       </div>
     </div>
   </div>
   <div>
-    <button type="button" class="btn btn-raised btn-raised bg-blue text-white">
+    <button type="submit" class="btn btn-raised btn-raised bg-blue text-white">
       Enregistrer
     </button>
   </div>

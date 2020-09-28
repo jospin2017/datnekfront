@@ -11,6 +11,7 @@ import { CountLangageAddComponent } from './pages/count-langage-add/count-langag
 import { HomeComponent } from './pages/home/home.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { LanguageDetailComponent } from './modals/language-detail/language-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {HttpClientModule} from '@angular/common/http';
     ListLangageComponent,
     HeaderLangageComponent,
     CountLangageAddComponent,
-    HomeComponent
+    HomeComponent,
+    LanguageDetailComponent
   ],
   imports: [
     BrowserModule,
