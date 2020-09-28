@@ -1,0 +1,39 @@
+<div>
+  <h4 class="mb-3">Liste des langues</h4>
+
+  <div >
+
+    <ul *ngFor="let row of langages">
+      <li class="row">
+        <div class="bg-white" style="flex: auto; display: flex; margin-right: 55px">
+
+
+
+          <div class="col-md-2 val">
+            <strong>{{row.designation}}</strong>
+          </div>
+
+          <div class="col-md-2 val">
+            <strong>Niveau parlé : </strong> {{row.niveau_p}}
+          </div>
+
+          <div class="col-md-2 val">
+            <strong>Niveau écrit : </strong> {{row.niveau_e}}
+          </div>
+
+          <div class="col-md-3 val">
+            <strong>Niveau compréhension : </strong> {{row.niveau_c}}
+          </div>
+
+          <div class="col-md-4">
+            <button type="button" class="btn btn-raised btn-raised bg-success text-white">Modifier</button>
+            <button type="button" class="btn btn-raised btn-raised bg-warning text-white">Detail</button>
+            <button type="button" class="btn btn-raised btn-raised bg-danger text-white">Supprimer</button>
+          </div>
+
+        </div>
+
+      </li>
+    </ul>
+  </div>
+</div>
